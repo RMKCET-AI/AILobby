@@ -1,17 +1,196 @@
+{% extends 'AIWeb/base.html' %}
 {% load static %}
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<img src="{% static 'AIWeb/images/ub.png' %}" alt="just">
-<h1>
-    Index
-</h1>
-</body>
-</html>
+{% block indexactive %}
+    active
+{% endblock %}
+{% block content %}
+    <main>
+        <!-- carousel start -->
+        <div class="container my-4">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'AIWeb/images/Carousel01.jpg' %}" class="d-block w-100" alt="..." height="600">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'AIWeb/images/Carousel02.jpg' %}" class="d-block w-100" alt="..." height="600">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'AIWeb/images/Carousel03.jpg' %}" class="d-block w-100" alt="..." height="600">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- carousel end -->
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+            <div class="col-md-5 p-lg-4 mx-auto ">
+                <h1 class="display-5 fw-bold">Department of AI</h1>
+                <p class="lead fw-normal">Welcome to the Department of AI-DS RMKCET</p>
+            </div>
+            <p class="lead fw-normal">
+                    The Department of Artificial Intelligence and Data Science was established in the year 2020, with
+                    Cognizant as its knowledge partner to offer an industry relevant program.
+                    Our Mission is to instill in the students the knowledge for world class technical competence,
+                    entrepreneurial skill and a spirit of innovation in the area of Artificial Intelligence and Data
+                    Science to solve real world problems. We also inculcate right attitude and discipline and develop
+                    industry ready professionals for serving the society.
+                    The Department has state of art laboratory and well qualified, highly experienced and dedicated team
+                    of faculty trained in the recent trends of Artificial Intelligence and Data Science.
+                </p><br>
+            <div class="col-md-5 p-lg-4 mx-auto my-5">
+                <h3 class="display-7 fw-normal"><u>Our Vision</u></h3>
+                <p class="lead">"To elevate innovative research and consultancy through proficient teaching and learning
+                   process to develop further technology solutions for the benefits of industry and society".</p>
+            </div>
+            <div class="product-device shadow-sm d-none d-md-block"></div>
+            <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+        </div>
+        <br>
+
+        <!--div class="bd-masthead mb-3  bg-warning" id="content">
+        <div class="container px-4 px-md-3">
+            <div class="row align-items-lg-center">
+                <div class="col-8 mx-auto col-md-4 order-md-2 col-lg-5">
+                    <img src="{% static 'AIWeb/images/Banner01.png' %}" height="500" width="500">
+                </div>
+                <div class="col-md-8 order-md-1 col-lg-7 text-center text-md-start">
+                    <h1 class="mb-3">AI-DS</h1>
+                    <p class="lead mb-4">
+                        Department of  DS established in 2020
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bd-masthead mb-3" id="content">
+        <div class="container px-4 px-md-3">
+            <div class="row align-items-lg-center">
+                <div class="col-8 mx-auto col-md-4 order-md-2 col-lg-5">
+                    <h1 class="mb-3">Build fast, responsive sites with Bootstrap</h1>
+                    <p class="lead mb-4">
+                        Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
+                        popular
+                        front-end open source toolkit, featuring Sass variables and mixins, responsive grid system,
+                        extensive prebuilt components, and powerful JavaScript plugins.
+                    </p>
+                </div>
+                <div class="col-md-8 order-md-1 col-lg-7 text-center text-md-start">
+                    <img src="{% static 'AIWeb/images/AILobbyLogo.png' %}">
+                </div>
+            </div>
+        </div>
+    </div-->
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <!-- /.row -->
+
+
+            <!-- START THE FEATURETTES -->
+            <!--B.TECH. - ARTIFICIAL INTELLIGENCE AND DATA SCIENCE
+            The Department of Artificial Intelligence and Data Science was established in the year 2020, with Cognizant
+            as its knowledge partner to offer an industry relevant program.-->
+
+            <div class="row featurette bg-warning">
+                <div class="col-md-7 mt-4 px-5 text-dark">
+                    <h2 class="featurette-heading text-center" style="font-family: 'Lucida Calligraphy'">AI</h2>
+                    <p class="lead"><b>The major limitation in defining AI as simply "building machines that are intelligent" is that it doesn't actually explain what artificial intelligence is?
+                        What makes a machine intelligent? <br>AI is an interdisciplinary science with multiple approaches,
+                        but advancements in machine learning and deep learning are creating a paradigm shift in virtually every sector of the tech industry. </b></p>
+                </div>
+                <div class="col-md-5 py-3">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                         src="{% static 'AIWeb/images/Banner01.png' %}"
+                         width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
+                         aria-label="Placeholder: 500x500"
+                         preserveAspectRatio="xMidYMid slice" focusable="false" alt="img">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette bg-info px-4">
+                <div class="col-md-7 order-md-2 py-1 px-4">
+                    <h2 class="featurette-heading text-center" style="font-family: 'Lucida Calligraphy'">Data Science</h2>
+                    <h2>
+                        <span
+                                class="text-muted">
+                        </span>
+                    </h2>
+                    <p class="lead"><b>Data science is the discipline of making data useful.
+                        It is a "concept to unify statistics, data analysis, informatics, and their related methods" in order to "understand and analyze actual phenomena" with data.
+                        The field encompasses preparing data for analysis, analyzing data, and presenting findings to inform high-level decisions in a broad range of application domains.
+                    </b></p>
+                </div>
+                <div class="col-md-5 order-md-1 py-3">
+                    <!--svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                         height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                         preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee"></rect>
+                        <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                    </svg-->
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                         src="{% static 'AIWeb/images/Banner02.jpg' %}"
+                         width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
+                         aria-label="Placeholder: 500x700"
+                         preserveAspectRatio="xMidYMid slice" focusable="false" alt="img">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette  bg-dark mb-5">
+                <div class="col-md-7 py-6 px-5 text-light">
+                    <h2 class="featurette-heading text-center" style="font-family: 'Lucida Calligraphy'">AI & DS</h2>
+                    <p class="lead">AI and Data science is the current trend ruling the business world.
+                    In this course, you will learn how to design, create and implement AI and DS based software solutions to solve actual business problems.
+                     It is a specialised branch that deals with the development of data driven solutions,
+                        data visualization tools and techniques to analyse big data.</p>
+                </div>
+                <div class="col-md-5 py-3">
+                    <!--svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                         height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                         preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee"></rect>
+                        <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                    </svg-->
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                         src="{% static 'AIWeb/images/Banner03.jpg' %}"
+                         width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
+                         aria-label="Placeholder: 500x500"
+                         preserveAspectRatio="xMidYMid slice" focusable="false" alt="img">
+                </div>
+            </div>
+
+
+
+            <!-- /END THE FEATURETTES -->
+
+        </div>
+    </main>
+
+{% endblock %}

@@ -1,15 +1,137 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'AIWeb/css/carousel.css' %}" rel="stylesheet">
+	<link rel="icon" href= "{% static 'AIWeb/images/AILobbyLogo.png' %}" type="image/gif">
 </head>
 <body>
-    <h1>
-        Base
-    </h1>
+<nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}"  style="font-size: 35px; text-decoration: none">
+            <img src="{% static 'AIWeb/images/AILobbyLogo.png' %}" alt="AI" width="70"
+                 height="70">
+            AI-Lobby</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="flex-box">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link {% block indexactive %}{% endblock %}" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% block projectsactive %}{% endblock %}" href="{% url 'projects' %}">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% block eventsactive %}{% endblock %}" href="{% url 'events' %}">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% block academicsactive %}{% endblock %}" href="{% url 'academics' %}">Academics</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link {% block contactsactive %}{% endblock %}" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+{% block content %}
+
+{% endblock %}
+<footer class="bd-footer py-0 bg-light">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-3 mb-3">
+                <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/"
+                   aria-label="Bootstrap">
+                    <img src="{% static "AIWeb/images/AILobbyLogo.png" %}" width="50" height="50">
+                    <span class="fs-5">AI-Lobby</span>
+                </a>
+                <ul class="list-unstyled small text-muted">
+                    <li class="mb-2">Designed, Built and Maintained by the students of AI-DS Department.<br>- Team Thunder.
+                    </li>
+                    <li class="mb-2">Contact us <a href="mailto:ailobby2021@gmail.com">@TeamThunder</a>
+                    </li>
+                    <li class="mb-2">Code licensed <a href="https://github.com/thunder-007/AI-Lobby/blob/main/LICENSE"
+                                                      target="_blank" rel="license noopener">GNU 3.1</a>,
+                    </li>
+                    <li class="mb-2 ">Currently v1.0</li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="https://rmkcet.ac.in/index.php">RMKCET</a></li>
+                    <li class="mb-2"><a href="http://www.rmkec.ac.in/">RMKEC</a></li>
+                    <li class="mb-2"><a href="https://rmd.ac.in/">RMDEC</a></li>
+                    <li class="mb-2"><a href="https://www.annauniv.edu/">Anna University</a></li>
+                    <li class="mb-2"><a href="mailto:hod_ads@rmkcet.ac.in">Mail@HOD</a></li>
+
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+                <h5>Tech Articles</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="https://www.bbc.com/news/technology">BBC</a></li>
+                    <li class="mb-2"><a href="https://www.nytimes.com/international/section/technology">NY Times</a></li>
+                    <li class="mb-2"><a href="https://www.quora.com/">Quora</a></li>
+                    <li class="mb-2"><a href="https://www.popsci.com/technology/">Popular Science</a></li>
+                    <li class="mb-2"><a href="https://www.newscientist.com/subject/technology//">NewScientist</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+                <h5>Self-Learning</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="https://skillrack.com/">SkillRack</a></li>
+                    <li class="mb-2"><a href="https://stackoverflow.com/">Stack-Overflow</a></li>
+                    <li class="mb-2"><a href="https://www.freecodecamp.org/">FreeCodeCamp</a></li>
+                    <li class="mb-2"><a href="https://www.udemy.com/">Udemy</a></li>
+                    <li class="mb-2"><a href="https://www.codecademy.com/">Codecademy</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+                <h5>Community</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="https://github.com/">GitHub</a></li>
+                    <li class="mb-2"><a href="https://www.instagram.com/rmkcet_institution/">Instagram</a></li>
+                    <li class="mb-2"><a href="https://in.linkedin.com/company/rmkect-institution">Linked-in</a></li>
+                    <li class="mb-2"><a href="https://www.facebook.com/Rmkcet.institution/">Facebook</a></li>
+                    <li class="mb-2"><a href="https://www.youtube.com/channel/UCey8OFCvQkiITgRRfRsItcg">YouTube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
 </body>
 </html>
