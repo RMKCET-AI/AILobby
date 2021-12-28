@@ -4,4 +4,196 @@
     active
 {% endblock %}
 {% block content %}
+    <style>
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+    </style>
+    <main>
+        <section class="py-5 mt-5 text-center container bg-light">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Project Gallery</h1>
+                    <p class="lead text-muted">These are the creative arts of our ignated minds , the
+                        creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it
+                        entirely.</p>
+                    <p>
+                        <a href="/dashboard" class="btn btn-primary my-2">Submit a Project</a>
+                        <a href="/dashboard" class="btn btn-secondary my-2">Update Status</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="album py-5 "><!--bg-light"-->
+            <div class="container">
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <!--svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                 preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect>
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg-->
+                            <img src="{% static 'AIWeb/images/projectImg01.jpg' %}" height="225" width="100%">
+                            <div class="card-body">
+                                <h6>
+                                    project title
+                                </h6>
+                                <br>
+                                <p class="card-text">A project description is a high-level overview of why you're doing
+                                    a project. The document explains a project's objectives and its essential qualities.
+                                    ... The project description should include an overview of the following: Project
+                                    goals and objectives. Stakeholders and their roles.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                    href="/" target="_blank" type="button"
+                                                    class="btn">View</a></button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <!--svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                 preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect>
+
+                            </svg-->
+                            <img src="{% static 'AIWeb/images/projectImg02.jpg' %}" height="225" width="100%">
+                            <div class="card-body">
+                                <h6>
+                                    project title
+                                </h6>
+                                <br>
+                                <p class="card-text">A project description is a high-level overview of why you're doing
+                                    a project. The document explains a project's objectives and its essential qualities.
+                                    ... The project description should include an overview of the following: Project
+                                    goals and objectives. Stakeholders and their roles.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                    href="/" target="_blank" type="button"
+                                                    class="btn">View</a></button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <!--svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                 preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect>
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg-->
+                            <img src="{% static 'AIWeb/images/projectImg03.jpg' %}" height="225" width="100%">
+                            <div class="card-body">
+                                <h6>
+                                    project title
+                                </h6>
+                                <br>
+                                <p class="card-text">A project description is a high-level overview of why you're doing
+                                    a project. The document explains a project's objectives and its essential qualities.
+                                    ... The project description should include an overview of the following: Project
+                                    goals and objectives. Stakeholders and their roles.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                    href="/" target="_blank" type="button"
+                                                    class="btn">View</a></button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <!--svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                 preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect>
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg-->
+                            <img src="{% static 'AIWeb/images/projectImg04.jpg' %}" height="225" width="100%">
+                            <div class="card-body">
+                                <h6>
+                                    <b>
+                                        project title
+                                    </b>
+                                </h6>
+                                <br>
+                                <p class="card-text">A project description is a high-level overview of why you're doing
+                                    a project. The document explains a project's objectives and its essential qualities.
+                                    ... The project description should include an overview of the following: Project
+                                    goals and objectives. Stakeholders and their roles.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                    href="/" target="_blank" type="button"
+                                                    class="btn">View</a></button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% for project in Projects %}
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <!--svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                     preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                                    <rect width="100%" height="100%" fill="#55595c"></rect>
+                                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                                </svg-->
+                                <img src="{{ project.projectTemplate.url }}" height="225" width="100%">
+                                <div class="card-body">
+                                    <h6>
+                                        {{ project.projectTitle }}
+                                    </h6>
+                                    <br>
+                                    <p class="card-text">{{ project.desc }}</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                                    href="{{ project.projectLink }}" target="_blank" type="button"
+                                                    class="btn">View</a></button>
+                                        </div>
+                                        <small class="text-muted">{{ project.created_at }}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </main>
 {% endblock %}
