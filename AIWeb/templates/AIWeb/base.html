@@ -13,12 +13,12 @@
 
     <!-- Custom styles for this template -->
     <link href="{% static 'AIWeb/css/carousel.css' %}" rel="stylesheet">
-	<link rel="icon" href= "{% static 'AIWeb/images/AILobbyLogo.png' %}" type="image/gif">
+    <link rel="icon" href="{% static 'AIWeb/images/AILobbyLogo.png' %}" type="image/gif">
 </head>
 <body>
 <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}"  style="font-size: 35px; text-decoration: none">
+        <a class="navbar-brand" href="{% url 'home' %}" style="font-size: 35px; text-decoration: none">
             <img src="{% static 'AIWeb/images/AILobbyLogo.png' %}" alt="AI" width="70"
                  height="70">
             AI-Lobby</a>
@@ -30,7 +30,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <a class="nav-link {% block indexactive %}{% endblock %}" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% block indexactive %}{% endblock %}" aria-current="page"
+                           href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% block projectsactive %}{% endblock %}" href="{% url 'projects' %}">Projects</a>
@@ -42,7 +43,8 @@
                         <a class="nav-link {% block academicsactive %}{% endblock %}" href="{% url 'academics' %}">Academics</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link {% block contactsactive %}{% endblock %}" href="{% url 'contact' %}">Contact</a>
+                        <a class="nav-link {% block contactsactive %}{% endblock %}"
+                           href="{% url 'contact' %}">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -66,11 +68,12 @@
                     <span class="fs-5">AI-Lobby</span>
                 </a>
                 <ul class="list-unstyled small text-muted">
-                    <li class="mb-2">Designed, Built and Maintained by the students of AI-DS Department.<br>- Team Thunder.
+                    <li class="mb-2">Designed, Built and Maintained by the students of AI-DS Department.<br>- Team
+                        Thunder.
                     </li>
                     <li class="mb-2">Contact us <a href="mailto:ailobby2021@gmail.com">@TeamThunder</a>
                     </li>
-                    <li class="mb-2">Code licensed <a href="https://github.com/thunder-007/AI-Lobby/blob/main/LICENSE"
+                    <li class="mb-2">Code licensed <a href="https://github.com/RMKCET-AI/AILobby/blob/main/LICENSE"
                                                       target="_blank" rel="license noopener">GNU 3.1</a>,
                     </li>
                     <li class="mb-2 ">Currently v1.0</li>
@@ -91,7 +94,8 @@
                 <h5>Tech Articles</h5>
                 <ul class="list-unstyled">
                     <li class="mb-2"><a href="https://www.bbc.com/news/technology">BBC</a></li>
-                    <li class="mb-2"><a href="https://www.nytimes.com/international/section/technology">NY Times</a></li>
+                    <li class="mb-2"><a href="https://www.nytimes.com/international/section/technology">NY Times</a>
+                    </li>
                     <li class="mb-2"><a href="https://www.quora.com/">Quora</a></li>
                     <li class="mb-2"><a href="https://www.popsci.com/technology/">Popular Science</a></li>
                     <li class="mb-2"><a href="https://www.newscientist.com/subject/technology//">NewScientist</a></li>
@@ -110,7 +114,7 @@
             <div class="col-6 col-lg-2 mb-3">
                 <h5>Community</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="https://github.com/">GitHub</a></li>
+                    <li class="mb-2"><a href="https://github.com/RMKCET-AI">GitHub</a></li>
                     <li class="mb-2"><a href="https://www.instagram.com/rmkcet_institution/">Instagram</a></li>
                     <li class="mb-2"><a href="https://in.linkedin.com/company/rmkect-institution">Linked-in</a></li>
                     <li class="mb-2"><a href="https://www.facebook.com/Rmkcet.institution/">Facebook</a></li>
