@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from .models import Contact,contactForm
+from .models import Contact,contactForm,Project
 
 
 # Create your views here.
@@ -28,6 +28,8 @@ def contact(request):
 
 
 def projects(request):
+    Projects = Project.objects.all()
+    return render(request, 'AIWeb/projects.html', {'Projects': Projects})
     return render(request, 'AIWeb/projects.html')
 
 

@@ -1,6 +1,15 @@
 from django.db import models
 from django import forms
 from captcha.fields import CaptchaField
+from cloudinary.models import CloudinaryField
+
+
+class Project(models.Model):
+    projectTemplate = CloudinaryField('image')
+    projectTitle = models.CharField(default = "Title ", max_length=25)
+    desc = models.TextField(default="not mentioned")
+    projectLink = models.URLField(max_length=200, default="not mentioned")
+    created_at = models.DateTimeField(auto_now_add=True)
 
 
 class contactForm(forms.Form):
