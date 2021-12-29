@@ -1,2 +1,3 @@
 # AILobby
 Department Website RMKCET
+3rd semester mini project by students of AI-DS RMKCET
