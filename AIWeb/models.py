@@ -11,6 +11,9 @@ class Project(models.Model):
     projectLink = models.URLField(max_length=200, default="not mentioned")
     created_at = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return f'{self.projectTitle} - {self.desc[:15]} ..'
+
 
 class contactForm(forms.Form):
     captcha = CaptchaField()
