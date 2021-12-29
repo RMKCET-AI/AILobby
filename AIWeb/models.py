@@ -6,7 +6,7 @@ from cloudinary.models import CloudinaryField
 
 class Project(models.Model):
     projectTemplate = CloudinaryField('image')
-    projectTitle = models.CharField(default="Title ", max_length=25)
+    projectTitle = models.TextField(default="Title ")
     desc = models.TextField(default="not mentioned")
     projectLink = models.URLField(max_length=200, default="not mentioned")
     created_at = models.DateTimeField(auto_now_add=True)
@@ -28,7 +28,7 @@ class Contact(models.Model):
 
 
 class DigitalNote(models.Model):
-    subjectName = models.CharField(max_length=50)
+    subjectName = models.TextField()
     books = models.JSONField(default=dict)
 
     def __str__(self):
