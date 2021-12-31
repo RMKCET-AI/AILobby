@@ -1,6 +1,8 @@
 from django.shortcuts import render, HttpResponse
-from .models import Contact,contactForm,Project,DigitalNote
-
+from .models import Contact, contactForm, Project, DigitalNote
+from django.contrib.auth.models import User
+from .features import *
+import threading
 
 # Create your views here.
 def index(request):
@@ -18,6 +20,9 @@ def contact(request):
             print(name, email, phone, concern)
             contactObj = Contact(name=name, email=email, phone=phone, desc=concern)
             contactObj.save()
+            adminEmails = [user.email for user in User.objects.all()]
+            mailingThread = threading.Thread(target=send_mail_toadmins,args=(name,concern,phone,email,adminEmails))
+            mailingThread.start()
             form = contactForm()
             return render(request, 'AIWeb/contact.html', {'form': form, 'submitted': True, 'try': True})
         else:
@@ -37,5 +42,5 @@ def events(request):
 
 
 def academics(request):
-    digitalNotes = {'allSubject':list(DigitalNote.objects.all())[::-1]}
-    return render(request, 'AIWeb/academics.html',digitalNotes)
+    digitalNotes = {'allSubject': list(DigitalNote.objects.all())}
+    return render(request, 'AIWeb/academics.html', digitalNotes)
