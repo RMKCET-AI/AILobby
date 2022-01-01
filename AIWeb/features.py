@@ -6,7 +6,7 @@ import threading
 
 def send_mail_toadmins(mail_from, concern, phone, email_id, admin_mails, subject="You got a message from AILobby",
                        sender_email="ailobby2021@gmail.com",
-                       password="ArtificialIntelligence@2021"):
+                       password="IAMIronman-3000"):
     message = MIMEMultipart("alternative")
     message["Subject"] = subject
     message["From"] = sender_email
