@@ -14,6 +14,7 @@ from pathlib import Path
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-jd2hzl91bsx6ry4uv^x%_%*#98os*-p(u0*0a5nij02dgb+=wi'
+SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -127,9 +128,10 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Activate Django-Heroku.
+
 cloudinary.config(
-  cloud_name = "thunder-007",
-  api_key = "658415515653469",
-  api_secret = "IamzVktVgdJ-QIu5HAc-i0S3iuU"
+  cloud_name = os.environ["CLOUDINARY_NAME"],
+  api_key = os.environ["CLOUDINARY_API_KEY"],
+  api_secret = os.environ["CLOUDINARY_API_SECRET"]
 )
 django_heroku.settings(locals())

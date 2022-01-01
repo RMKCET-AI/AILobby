@@ -1,3 +1,4 @@
+import os
 import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -5,8 +6,8 @@ import threading
 
 
 def send_mail_toadmins(mail_from, concern, phone, email_id, admin_mails, subject="You got a message from AILobby",
-                       sender_email="ailobby2021@gmail.com",
-                       password="ArtificialIntelligence@2021"):
+                       sender_email=os.environ["AILOBBY_MAIL"],
+                       password=os.environ["AILOBBY_PASS"]):
     message = MIMEMultipart("alternative")
     message["Subject"] = subject
     message["From"] = sender_email
