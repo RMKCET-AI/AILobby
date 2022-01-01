@@ -3,10 +3,14 @@ from .models import Contact, contactForm, Project, DigitalNote
 from django.contrib.auth.models import User
 from .features import *
 import threading
+import os
 
 # Create your views here.
 def index(request):
+    print(os.environ.get("CLOUDINARY_NAME"))
+    print(os.environ.get("AILOBBY_MAIL"))
     return render(request, 'AIWeb/index.html')
+
 
 
 def contact(request):
