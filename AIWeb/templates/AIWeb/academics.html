@@ -1,11 +1,33 @@
 {% extends 'AIWeb/base.html' %}
+{% load static %}
 {% block academicsactive %}
     active
 {% endblock %}
 {% block content %}
     <div class="container mb-5">
         <div class="container my-3 mb-5">
-            <h1 class="text-center">Digital Notes</h1>
+            <h1 class="text-center" style="font-family: Narkisim;font-style: oblique;
+            font-size: revert;color: black">ACADEMICS</h1>
+            <div class="container">
+<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{% static 'AIWeb/images/semester.jpg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="text-gradient text-danger mb-3" style="font-family: 'Modern No. 20';
+        font-size: 40px;text-align: center">Semester Gallery</h1>
+            <p>Semester exams keeps the students in touch with the books the whole year.
+                It can prove beneficial for the students.It allows greater interaction with
+                teachers and the children will be more focused on preparing throughout the year.
+            The students will be constantly evaluated and the depth and breadth of their knowledge will improve.
+                </p>
+            <a class="nav-link {% block semesteractive %}{% endblock %}"
+                            href="{% url 'semester' %}" style="text-align: center">Semester Gallery</a>
+      </div>
+    </div>
+  </div>
+            <h1 class="text-center" style="font-family: Narkisim;font-style: oblique;
+            font-size: revert;color: black">DIGITAL NOTES</h1>
         </div>
         <div class="accordion accordion-flush" id="accordionFlushExample">
             {% for subject in allSubject %}

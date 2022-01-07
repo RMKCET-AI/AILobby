@@ -44,7 +44,15 @@ def projects(request):
 def events(request):
     return render(request, 'AIWeb/events.html')
 
+def webinar(request):
+    return render(request, 'AIWeb/webinar.html')
+
+def club(request):
+    return render(request, 'AIWeb/club.html')
 
 def academics(request):
     digitalNotes = {'allSubject': list(DigitalNote.objects.all())}
     return render(request, 'AIWeb/academics.html', digitalNotes)
+
+def semester(request):
+    return render(request, 'AIWeb/semester.html')

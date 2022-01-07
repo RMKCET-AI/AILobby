@@ -10,5 +10,16 @@ urlpatterns = [
     path('contact', views.contact, name="contact"),
     path('projects', views.projects, name="projects"),
     path('events', views.events, name="events"),
-    path('academics', views.academics, name="academics")
+    path('events/webinar', views.webinar, name="webinar"),
+    path('events/club', views.club, name="club"),
+    path('academics', views.academics, name="academics"),
+    path('academics/semester', views.semester, name="semester"),
+
 ]
+
+
+
+
+
+
+
